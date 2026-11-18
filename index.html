@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cedric Van Uytsel | Visionary Full-Stack</title>
+    <meta charset="UTF-8" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&family=Orbitron:wght@900&family=Poppins:wght@300;800&display=swap');
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #090014 0%, #2b0057 45%, #00d4ff 100%);
+            color: #e0f7fa;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        .top-nav {
+            background: rgba(255, 0, 255, 0.25);
+            backdrop-filter: blur(12px);
+            padding: 35px 10px;
+            text-align: center;
+            border-bottom: 5px solid #00ffcc;
+            box-shadow: 0 0 35px #ff00ff;
+        }
+
+        .mega-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3.2rem;
+            background: linear-gradient(to right, #ff00cc, #3333ff, #00ffcc, #ffff00);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin: 0;
+            text-shadow: 0px 0px 20px rgba(255, 0, 255, 0.6);
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 6px;
+            margin-top: 25px;
+        }
+
+        .nav-btn {
+            background: linear-gradient(45deg, #ff007f, #7f00ff);
+            color: #ffff00;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 800;
+            text-transform: uppercase;
+            border: 3px dashed #00ffcc;
+            box-shadow: 0 0 15px #ff007f;
+        }
+
+        .wrapper {
+            width: 1150px;
+            margin: 10px auto;
+            padding: 5px;
+        }
+
+        .section-divider {
+            font-size: 36px;
+            color: #ffff00;
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            margin: 50px 0 20px 0;
+            padding: 12px;
+            background: rgba(255, 0, 255, 0.2);
+            border-top: 4px dashed #00ffcc;
+            border-bottom: 4px dashed #00ffcc;
+            text-transform: uppercase;
+        }
+
+        .ai-hero {
+            background: rgba(255, 255, 255, 0.08);
+            border: 2px solid rgba(0, 255, 204, 0.5);
+            border-radius: 30px;
+            padding: 50px 15px;
+            text-align: center;
+            box-shadow: 0 10px 50px rgba(0, 212, 255, 0.4);
+            margin-top: 20px;
+        }
+
+        .ai-badge {
+            display: inline-block;
+            background: #ff00ff;
+            color: white;
+            padding: 6px 18px;
+            border-radius: 999px;
+            font-weight: bold;
+            font-size: 13px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .hero-img-broken {
+            width: 450px;
+            height: 150px;
+            border-radius: 50%;
+            border: 8px solid #ff00ff;
+            margin-top: 20px;
+            box-shadow: 0 0 40px #00ffcc;
+        }
+
+        .grid-3-cols {
+            display: flex;
+            justify-content: space-between;
+            gap: 8px;
+            margin-top: 25px;
+        }
+
+        .glass-box {
+            background: linear-gradient(180deg, rgba(255,0,255,0.2), rgba(0,255,204,0.1));
+            border: 2px solid #ff00cc;
+            border-radius: 20px;
+            padding: 12px;
+            width: 33%;
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.2);
+        }
+
+        .glass-box h3 {
+            font-family: 'Comic Neue', cursive;
+            color: #ffff00;
+            font-size: 26px;
+            margin-top: 0;
+        }
+
+        .project-card-vibe {
+            background: rgba(15, 5, 36, 0.85);
+            border-left: 12px solid #ff00ff;
+            border-right: 12px solid #00ffcc;
+            border-radius: 8px;
+            padding: 12px;
+            margin-bottom: 12px;
+            box-shadow: 0 0 25px rgba(127, 0, 255, 0.7);
+        }
+
+        .buzzword-text {
+            color: #d1c4e9;
+            font-size: 15px;
+            line-height: 1.2;
+        }
+
+        .vibe-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #ff8a00, #e52e71);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px;
+            margin-top: 6px;
+        }
+
+        .pill-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 4px;
+            margin-top: 10px;
+        }
+
+        .neon-pill {
+            background: #ffff00;
+            color: #000000;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-weight: 900;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        .img-dump {
+            display: flex;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .img-dump img {
+            width: 280px;
+            height: 120px;
+            border: 3px solid #ffff00;
+        }
+
+        .team-circle-vibe {
+            width: 320px;
+            height: 130px;
+            border-radius: 50%;
+            border: 6px solid #00ffcc;
+        }
+
+        .bottom-bar {
+            background: #ff007f;
+            color: #ffff00;
+            text-align: center;
+            padding: 40px;
+            margin-top: 50px;
+            font-family: 'Comic Neue', cursive;
+            font-size: 20px;
+            border-top: 8px dotted #00ffcc;
+        }
+
+        .bottom-bar a {
+            color: #00ffcc;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-nav">
+        <div class="mega-title">🚀 CEDRIC VAN UYTSEL — NEXT-GEN DIGITAL ARCHITECT 🚀</div>
+        <p style="color: #00ffcc; font-weight: bold; margin: 5px 0;">Synergizing Scalable Code &amp; Disruptive Gaming Paradigms</p>
+        <div class="nav-links">
+            <a href="#about" class="nav-btn">Over Mij 🏠</a>
+            <a href="#cello" class="nav-btn">Cello App ✨</a>
+            <a href="#games" class="nav-btn">Games 🎮</a>
+            <a href="#programs" class="nav-btn">Programma's 💻</a>
+            <a href="#webapps" class="nav-btn">Web Apps 🌐</a>
+        </div>
+    </div>
+
+    <div class="wrapper">
+
+        <div id="about" class="ai-hero">
+            <div class="ai-badge">✨ WELCOME TO THE FUTURE OF INNOVATION ✨</div>
+            <div style="font-size: 42px; font-weight: 800; color: #ffffff;">Hallo, ik ben Cedric Van Uytsel!</div>
+            <div style="font-size: 22px; color: #ff00ff; font-weight: bold;">Passionate Tech Enthusiast | Bachelor Toegepaste Informatica | Problem Solver</div>
+            <p class="buzzword-text" style="max-width: 800px; margin: 20px auto;">
+                Welkom in mijn digitale universum! Als gepassioneerde en resultaatgerichte ontwikkelaar sla ik de brug tussen cutting-edge front-end architectuur en meeslepende Unity 3D-game-ervaringen. Ik adem innovatie, schaalbare oplossingen en pixel-perfecte synergie.
+            </p>
+            <div>
+                <a href="#cello" class="vibe-btn">Explore My Journey 🚀</a>
+                <a href="#games" class="vibe-btn">Discover My Games 🎮</a>
+            </div>
+            <img class="hero-img-broken" src="img/cedric.jpg" alt="Cedric">
+        </div>
+
+        <div class="grid-3-cols">
+            <div class="glass-box">
+                <h3>🎮 Game Development</h3>
+                <p class="buzzword-text">Het smeden van hyper-interactieve virtuele werelden en next-level gameplay mechanics met C# en de Unity Game Engine.</p>
+            </div>
+            <div class="glass-box">
+                <h3>⚡ Front-End Mastery</h3>
+                <p class="buzzword-text">Het bouwen van bliksemsnelle, responsieve en toekomstbestendige webapplicaties met TypeScript en React.</p>
+            </div>
+            <div class="glass-box">
+                <h3>🎨 UI/UX Alchemie</h3>
+                <p class="buzzword-text">Het transformeren van complexe ideeën naar intuïtieve, gebruikersgerichte interfaces in Figma.</p>
+            </div>
+        </div>
+
+        <div class="project-card-vibe" style="margin-top: 20px; text-align: center;">
+            <h3 style="color: #ffff00; font-family: 'Orbitron', sans-serif; margin-top: 0;">🛠️ MIJN TECH ARSENAL 🛠️</h3>
+            <div class="pill-container" style="justify-content: center;">
+                <span class="neon-pill">C#</span>
+                <span class="neon-pill">Unity</span>
+                <span class="neon-pill">TypeScript (React)</span>
+                <span class="neon-pill">Java</span>
+                <span class="neon-pill">Python</span>
+                <span class="neon-pill">SQL</span>
+                <span class="neon-pill">JavaScript</span>
+                <span class="neon-pill">PHP</span>
+            </div>
+        </div>
+
+        <div id="cello" class="section-divider">✨ FLAGSHIP PROJECT: CELLO ✨</div>
+
+        <div class="project-card-vibe">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div>
+                    <div class="ai-badge">🏆 FLAGSHIP VENTURE 🏆</div>
+                    <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">Cello — Revolutionizing Communication Anxiety</h3>
+                    <p style="color: #ffff00; font-weight: bold;">Mijn Rol: Chief Technical Officer (Stage &amp; Co-founder)</p>
+                    <p class="buzzword-text">
+                        Cello is een baanbrekende, bekroonde mobiele applicatie die jongeren empowert om hun telefoonangst te overwinnen via next-gen gamificatie. Als enige tech-architect in een dynamisch team van vier studenten heb ik het volledige ecosysteem vanaf nul opgebouwd en succesvol gelanceerd in de Google Play Store.
+                    </p>
+                    <a href="https://play.google.com/store/apps/details?id=be.celloapp" class="vibe-btn" target="_blank">Play Store 📱</a>
+                    <a href="https://celloapp.be/" class="vibe-btn" target="_blank">Website 🌐</a>
+                    <a href="https://linktr.ee/celloapp.be" class="vibe-btn" target="_blank">Socials 🔗</a>
+                </div>
+                <img src="img/Cello-Team.jpg" class="team-circle-vibe">
+            </div>
+            <img src="img/Cello-Demo.png" style="width: 100%; height: 220px; margin-top: 15px; border: 4px solid #ff00ff;">
+        </div>
+
+        <div class="project-card-vibe">
+            <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">⚙️ Cutting-Edge Tech Stack</h3>
+            <p class="buzzword-text">Geoptimaliseerd voor maximale performantie op lokale server-infrastructuur:</p>
+            <div class="buzzword-text">
+                • <b>Frontend:</b> React Native met TypeScript voor cross-platform synergie en dynamische i18n.<br>
+                • <b>Backend:</b> Java Spring Boot REST API gekoppeld aan een robuuste PostgreSQL database.<br>
+                • <b>AI &amp; Spraak:</b> Python-laag met lokaal Whisper-model voor real-time Speech-to-Text en Deepgram failover.<br>
+                • <b>Local LLM:</b> Ollama hosting (IBM Granite 4.1 en Google Gemma 4) voor diepgaande post-conversatieanalyses.
+            </div>
+            <div class="pill-container">
+                <span class="neon-pill">React Native</span>
+                <span class="neon-pill">TypeScript</span>
+                <span class="neon-pill">Spring Boot</span>
+                <span class="neon-pill">Python</span>
+                <span class="neon-pill">Whisper AI</span>
+                <span class="neon-pill">Ollama</span>
+                <span class="neon-pill">PostgreSQL</span>
+            </div>
+        </div>
+
+        <div class="project-card-vibe">
+            <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">🏅 VLAJO Start Academy - Winner van Linklaters Signature Award</h3>
+            <p class="buzzword-text">Een startup-competitie van VLAJO voor jonge ondernemers. Wij hebben de finale gehaald en de signature award van Linklaters gewonnen (de hoofdprijs zelf niet).</p>
+            <a href="https://www.youtube.com/watch?v=cvbakhE2jLg" class="vibe-btn" target="_blank">Video Finalisten</a>
+            <a href="https://www.vlajo.org/nieuws/11-awards-tientallen-sterke-ideeen-en-een-gedeelde-ambitie-dit-waren-de-signature-awards-2026" class="vibe-btn" target="_blank">Artikel Prijzen</a>
+            <a href="https://www.vlajo.org/nieuws/wie-volgt-youthworksbe-op-zes-start-academy-finalisten-stoten-door-na-zinderende-pitch-o-clock" class="vibe-btn" target="_blank">Artikel Finalisten</a>
+            <div class="img-dump">
+                <img src="img/Cello-SA1.jpg">
+                <img src="img/Cello-SA2.jpg">
+                <img src="img/Cello-SA3.jpg">
+                <img src="img/Cello-SA4.jpg">
+                <img src="img/Cello-SA5.jpg">
+            </div>
+        </div>
+
+        <div class="project-card-vibe">
+            <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">🏅 UCLL Moving Minds Awards - Finalist</h3>
+            <p class="buzzword-text">Een competitie voor veelbelovende studentenprojecten. Winnaar wordt bekendgemaakt op 15 september 2026, wij zitten in de finale.</p>
+            <a href="https://www.ucll.be/nl/cello-een-app-tegen-bel-angst" class="vibe-btn" target="_blank">Artikel Cello</a>
+            <a href="https://www.ucll.be/nl/moving-minds-award" class="vibe-btn" target="_blank">Moving Minds Hoofdpagina</a>
+        </div>
+
+        <div class="project-card-vibe">
+            <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">🏅 Gen-E European Market Expansion Award - Finalist</h3>
+            <p class="buzzword-text">Een online competitie van Gen-E waaraan wij in de finale zaten voor de European Market Expansion Award.</p>
+            <a href="https://expo.gen-e.eu/expo/ebbc3fa6-8fe7-4728-bf9a-f61609d74c32" class="vibe-btn" target="_blank">Virtuele Stand</a>
+            <a href="https://gen-e.eu/award/europen-market-expansion-award/" class="vibe-btn" target="_blank">Competitie Artikel</a>
+        </div>
+
+        <div class="project-card-vibe">
+            <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">📰 Pers &amp; Media: HLN, Radio 2 &amp; De Tafel van Tine</h3>
+            <p class="buzzword-text">Met ons uniek concept verschenen wij in Het Laatste Nieuws, op Radio 2 (rond 1:10:00) en als quizvraag in De Tafel van Tine.</p>
+            <a href="https://www.hln.be/leuven/bang-om-te-bellen-leuvense-studenten-maken-app-waarin-je-telefoontjes-kan-oefenen-zoals-frietjes-bestellen~a0627afb/" class="vibe-btn" target="_blank">HLN Artikel</a>
+            <a href="https://www.vrt.be/vrtmax/luister/radio/r/radio-2-ann-and-daan~20-319/radio-2-ann-and-daan~20-40261-0" class="vibe-btn" target="_blank">Radio 2</a>
+            <a href="https://www.play.tv/video/de-tafel-van-gert/de-tafel-van-gert-s8/de-tafel-van-tine-s8-aflevering-53" class="vibe-btn" target="_blank">Tafel van Tine</a>
+            <div class="img-dump">
+                <img src="img/Cello-HLN.jpg">
+                <img src="img/Cello-TVT.png">
+            </div>
+        </div>
+
+        <div id="games" class="section-divider">🎮 INTERACTIVE GAMING EXPERIENCES 🎮</div>
+
+            <div class="project-card-vibe">
+                <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">🎮 Fragminded</h3>
+                <p class="buzzword-text">Een 3D actie spel gemaakt tijdens de BEST Leuven game jam 2025 gedurende 48 uur.</p>
+                <a href="https://cedvinvu.itch.io/fragminded" class="vibe-btn" target="_blank">Itch.io</a>
+                <div class="pill-container"><span class="neon-pill">Q4 2025</span><span class="neon-pill">team</span><span class="neon-pill">Unity</span></div>
+                <div class="img-dump"><img src="img/FMD1.png"><img src="img/FMD2.png"><img src="img/FMD3.png"></div>
+            </div>
+            <div class="project-card-vibe">
+                <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">🎮 Peggy the game</h3>
+                <p class="buzzword-text">Een 3D puzzel spel ontwikkeld in collaboratie met een klasgenoot, spel heeft geen plan voor verdere ontwikkeling.</p>
+                <a href="https://mediaville.itch.io/peggy-the-game" class="vibe-btn" target="_blank">Itch.io</a><a href="https://github.com/Mute-Games/PeggyEatersMainCode" class="vibe-btn" target="_blank">Github</a>
+                <div class="pill-container"><span class="neon-pill">Q1 2023</span><span class="neon-pill">in duo</span><span class="neon-pill">Unity</span></div>
+                <div class="img-dump"><img src="img/PtG1.png"><img src="img/PtG2.png"><img src="img/PtG3.png"></div>
+            </div>
+            <div class="project-card-vibe">
+                <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">🎮 War Storm</h3>
+                <p class="buzzword-text">Een simpel 3D voertuiggevecht spel met meerdere voertuigen.</p>
+                <a href="https://cedvinvu.itch.io/war-storm" class="vibe-btn" target="_blank">Itch.io</a><a href="https://github.com/Mute-Games/War-Storm" class="vibe-btn" target="_blank">Github</a>
+                <div class="pill-container"><span class="neon-pill">Q4 2022</span><span class="neon-pill">solo</span><span class="neon-pill">Unity</span></div>
+                <div class="img-dump"><img src="img/WS1.png"><img src="img/WS3.png"><img src="img/WS4.png"></div>
+            </div>
+            <div class="project-card-vibe">
+                <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">🎮 Boys und Flugzeug: Become the Pilot</h3>
+                <p class="buzzword-text">Een visuele novel als fan-game voor de animatieserie Girls und Panzer. Ik handelde vooral het programmeergedeelte af. Ontwikkeling is on-hold.</p>
+                <a href="https://cedvinvu.itch.io/bufvn" class="vibe-btn" target="_blank">Itch.io</a>
+                <div class="pill-container"><span class="neon-pill">Q4 2022</span><span class="neon-pill">in duo</span><span class="neon-pill">Suika 2</span></div>
+                <div class="img-dump"><img src="img/bufvn1.png"><img src="img/bufvn2.png"><img src="img/bufvn3.png"><img src="img/bufvn4.png"></div>
+            </div>
+            <div class="project-card-vibe">
+                <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">🎮 Fabriektreintje VR simulator</h3>
+                <p class="buzzword-text">Een simulator van een trektractor/treintje in een fabriek gemaakt met VR voor het opleiden van nieuwe chauffeurs.</p>
+                
+                <div class="pill-container"><span class="neon-pill">Q4 2025</span><span class="neon-pill">solo</span><span class="neon-pill">Unity</span></div>
+                
+            </div>
+            <div class="project-card-vibe">
+                <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">🎮 Altura Racing Game</h3>
+                <p class="buzzword-text">Een game gemaakt voor een fictieve gamified reclamecampagne voor het elektrische automerk 'Altura' (een zogezegde 'Tesla-killer' in Europa).</p>
+                <a href="https://github.com/SpectrumSphereGames/AlturaRaceGame" class="vibe-btn" target="_blank">Github</a>
+                <div class="pill-container"><span class="neon-pill">Q2 2025</span><span class="neon-pill">team</span><span class="neon-pill">Unity</span></div>
+                <div class="img-dump"><img src="img/ARG1.png"><img src="img/ARG2.png"></div>
+            </div>
+            <div class="project-card-vibe">
+                <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">🎮 Dungeons and Bad Decisions</h3>
+                <p class="buzzword-text">Een zeer simpel 2D RPG multiplayer spel gemaakt met TypeScript om te spelen in een browser.</p>
+                <a href="https://github.com/UCLL-Full-stack/project2425-group4-1" class="vibe-btn" target="_blank">Github</a>
+                <div class="pill-container"><span class="neon-pill">Q4 2024</span><span class="neon-pill">in duo</span><span class="neon-pill">Fullstack TypeScript</span></div>
+                
+            </div>
+            <div class="project-card-vibe">
+                <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">🎮 Shifting Shadows</h3>
+                <p class="buzzword-text">Een spel gemaakt in 4 dagen voor een gamejam. Het is een 2D sidescroller met 8 unieke levels met elk een eigen moeilijkheid.</p>
+                
+                <div class="pill-container"><span class="neon-pill">Q4 2023</span><span class="neon-pill">team</span><span class="neon-pill">Pygame</span></div>
+                
+            </div>
+            <div class="project-card-vibe">
+                <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">🎮 Ballenspel</h3>
+                <p class="buzzword-text">Een spel gemaakt in zeer korte tijd gebaseerd op de 'Suika game' maar met foto's van mijn klasgenoten.</p>
+                
+                <div class="pill-container"><span class="neon-pill">Q2 2023</span><span class="neon-pill">solo</span><span class="neon-pill">Unity</span></div>
+                
+            </div>
+            <div class="project-card-vibe">
+                <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">🎮 Dungeon Slayer</h3>
+                <p class="buzzword-text">Een 2D RPG game met een iets grotere focus op UI. Game is niet compleet geraakt wegens een te korte deadline.</p>
+                
+                <div class="pill-container"><span class="neon-pill">Q2 2023</span><span class="neon-pill">solo</span><span class="neon-pill">Unity</span></div>
+                
+            </div>
+            <div class="project-card-vibe">
+                <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">🎮 Zevenspel</h3>
+                <p class="buzzword-text">Een klein spel gebaseerd rond het 'zevenspel'. Je moet omhoog tellen tot 100 maar alle nummers met een 7, maaltafels van 7 of som van 7 ontwijken.</p>
+                <a href="https://github.com/Mute-Games/ZevenSpel" class="vibe-btn" target="_blank">Github</a>
+                <div class="pill-container"><span class="neon-pill">Q4 2022</span><span class="neon-pill">solo</span><span class="neon-pill">Unity</span></div>
+                
+            </div>
+            <div class="project-card-vibe">
+                <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">🎮 Class Eaters</h3>
+                <p class="buzzword-text">Een 3D FPS bossfight game waarin al mijn klasgenoten van toen een unieke bossfight waren.</p>
+                
+                <div class="pill-container"><span class="neon-pill">Q3 2022</span><span class="neon-pill">solo</span><span class="neon-pill">Unity</span></div>
+                <div class="img-dump"><img src="img/CE1.png"></div>
+            </div>
+            <div class="project-card-vibe">
+                <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">🎮 Minecraft clone</h3>
+                <p class="buzzword-text">Een Minecraft clone gemaakt als een 3D graphics project voor het onderzoeken van procedurele generatie.</p>
+                
+                <div class="pill-container"><span class="neon-pill">Q2 2025</span><span class="neon-pill">solo</span><span class="neon-pill">Unity</span></div>
+                
+            </div>
+            <div class="project-card-vibe">
+                <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">🎮 Vliegtuig simulatie</h3>
+                <p class="buzzword-text">Gewoon wat code bij elkaar gesmeten voor een vliegtuigmodel te simuleren. Wordt misschien in een game omgezet later.</p>
+                
+                <div class="pill-container"><span class="neon-pill">Q1 2025</span><span class="neon-pill">solo</span><span class="neon-pill">Unity</span></div>
+                
+            </div>
+
+        <div id="programs" class="section-divider">💻 HIGH-PERFORMANCE SOFTWARE 💻</div>
+
+        <div class="project-card-vibe">
+            <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">LAN woord doorgeef systeem</h3>
+            <p class="buzzword-text">
+                Een baanbrekend netwerkprogramma waarmee je een string kunt transporteren via LAN. Het programma ontvangt een string, voegt er data aan toe en stuurt deze door naar het volgende IP-adres.
+            </p>
+            <a href="https://github.com/Cedvinvu/LANwoorddoorgeefsysteem" class="vibe-btn" target="_blank">GitHub Repo 🚀</a>
+            <div class="pill-container">
+                <span class="neon-pill">Q2 2023</span>
+                <span class="neon-pill">C#</span>
+            </div>
+        </div>
+
+        <div id="webapps" class="section-divider">🌐 NEXT-GEN WEB ECOSYSTEMS 🌐</div>
+
+        <div class="project-card-vibe">
+            <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">35.2 Rubber Ducks Casino</h3>
+            <p class="buzzword-text">
+                Een groepsproject waarin we een fictief digitaal casino hebben gebouwd met IoT-integratie via een ESP32. De ESP32 verbindt een RFID-scanner met de applicatie zodat gebruikers automatisch in- en uitloggen bij het scannen van hun kaart.
+            </p>
+            <div class="pill-container">
+                <span class="neon-pill">Q3 2025</span>
+                <span class="neon-pill">TypeScript React</span>
+                <span class="neon-pill">Java Spring Boot</span>
+                <span class="neon-pill">ESP32</span>
+            </div>
+            <div class="img-dump">
+                <img src="img/RDC1.png">
+            </div>
+        </div>
+
+        <div class="project-card-vibe">
+            <h3 style="color: #00ffcc; font-family: 'Orbitron', sans-serif; margin: 0;">Codana Offerte Generator</h3>
+            <p class="buzzword-text">
+                Een krachtige webapplicatie voor het razendsnel genereren van offertes, voorzien van een intuïtieve editor, AI-integratie en exportmogelijkheden.
+            </p>
+            <div class="pill-container">
+                <span class="neon-pill">Q4 2024</span>
+                <span class="neon-pill">TypeScript React</span>
+                <span class="neon-pill">Java Spring Boot</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bottom-bar">
+        <div>🔥 READY TO REVOLUTIONIZE YOUR DIGITAL ECOSYSTEM? LET'S CONNECT! 🔥</div>
+        <div>
+            <a href="https://www.linkedin.com/in/cedricvanuytsel/">LinkedIn</a> | 
+            <a href="https://github.com/Cedvinvu">GitHub</a> | 
+            <a href="https://cedvinvu.itch.io/">Itch.io</a>
+        </div>
+        <div style="font-size: 14px; margin-top: 10px;">© 2026 Cedric Van Uytsel — Powered by Pure Passion &amp; Coffee (cedricvu@hotmail.be)</div>
+    </div>
+
+</body>
+</html>
